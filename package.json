@@ -1,0 +1,15 @@
+{
+  "name": "DataStructuresandAlgorithms",
+  "version": "1.0.0",
+  "description": "Coursera Data Structures and Algorithms Specialization",
+  "main": "/",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alex Walchli",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
