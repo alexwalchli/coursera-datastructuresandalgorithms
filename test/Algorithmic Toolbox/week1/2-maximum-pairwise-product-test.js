@@ -1,4 +1,4 @@
-const maximumPairWiseProduct = require('../../../src/Algorithmic Toolbox/week1/maximum-pairwise-product');
+const maximumPairWiseProduct = require('../../../src/Algorithmic Toolbox/week1/2-maximum-pairwise-product');
 const expect = require('chai').expect;
 
 describe('maximumPairWiseProduct', () => {

@@ -9,7 +9,7 @@ const readline = require('readline'),
 
 let input = [];
 
-const maximumPairWise = (sequence) => {
+const maximumPairWiseProduct = (sequence) => {
     let aMax = -1,
         aIndex = -1,
         bMax = -1,
@@ -39,9 +39,9 @@ rl.on('line', (cmd) => {
     if(input.length === 2){
         let integer = parseInt(input[0]);
         let sequence = input[1].trim().split(' ').map(i => parseInt(i));
-        console.log(maximumPairWise(sequence));
+        console.log(maximumPairWiseProduct(sequence));
         process.exit(0);
     }
 });
 
-module.exports = maximumPairWise;
+module.exports = maximumPairWiseProduct;
