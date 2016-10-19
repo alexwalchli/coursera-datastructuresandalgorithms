@@ -4,12 +4,13 @@
   "description": "Coursera Data Structures and Algorithms Specialization",
   "main": "/",
   "scripts": {
-    "test": "mocha"
+    "test": "standard --fix && mocha"
   },
   "author": "Alex Walchli",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "standard": "^8.4.0"
   }
 }
