@@ -1,3 +1,8 @@
+// Problem Introduction
+// In this problem, you are given a set of bars of gold and your goal is to take as much gold as possible
+// into your bag. There is just one copy of each bar and for each bar you can either take it or not (hence
+// you cannot take a fraction of a bar).
+
 'use strict'
 process.stdin.setEncoding('utf8')
 
@@ -41,6 +46,7 @@ const knapsackWithoutRepetitions = (W, n, weightOfItems) => {
     }
   }
 
+  // the last solution is the maximum weight that can be carried with the items given
   return solutions[W][n]
 }
 
