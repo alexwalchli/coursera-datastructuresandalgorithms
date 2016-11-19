@@ -12,49 +12,48 @@ const rl = readline.createInterface({
   terminal: false
 })
 
+// returns the minimum operations for n and the sequence of numbers leading up to n with the minimum amount of operations
 const dynamicPrimitiveCalculator = (n) => {
-  let numberOfOperations = 0
-  let sequence = [ 1 ]
-  let x = 1
-  let solutions = [[]]
+  let minOp = [0, 0] // min operations for 0 and 1 is 0
+  let sequences = [[0], [1]]
 
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; i++) {
+  for (let i = 2; i <= n; i++) {
+    let a = Infinity
+    let b = Infinity
+    let c = Infinity
+    let an
+    let bn
+    let cn
 
-      solution[i][j]
-
+    if (i % 3 === 0) {
+      an = i / 3
+      a = minOp[an] + 1
     }
-  }
+    if (i % 2 === 0) {
+      bn = i / 2
+      b = minOp[bn] + 1
+    }
+    cn = i - 1
+    c = minOp[cn] + 1
 
-  
-
-
-  while (x < n) {
-    let lastSolution = sequence[numberOfOperations]
-    if (lastSolution * 3 < n) {
-      x = (numberOfOperations + 1) * 3
-    } else if (lastSolution * 2 < n) {
-      x = (numberOfOperations + 1) * 2
-    } else {
-      x++
+    // probably can clean this up, for another day
+    let minOperations = Math.min(a, b, c)
+    switch (minOperations) {
+      case a:
+        sequences.push([ ...sequences[an], i ])
+        break
+      case b:
+        sequences.push([ ...sequences[bn], i ])
+        break
+      case c:
+        sequences.push([ ...sequences[cn], i ])
+        break
     }
 
-    numberOfOperations++
-    sequence.push(x)
+    minOp.push(minOperations)
   }
 
-  return [ numberOfOperations, sequence ]
-}
-
-function MinAndMax(m, M, i, j) {
-  let min = -Infinity
-  let max = Infinity
-
-  for(let k = i; k < j; k++) {
-    
-  }
-
-  return MinAndMax
+  return [ minOp[n], sequences[n] ]
 }
 
 const greedyPrimitiveCalculator = (x) => {

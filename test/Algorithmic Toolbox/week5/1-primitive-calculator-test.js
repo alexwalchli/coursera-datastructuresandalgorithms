@@ -17,7 +17,14 @@ describe('dynamic programming primitive calculator', () => {
 
     const numberOfOperationsAndSequence = dynamicPrimitiveCalculator(x)
     expect(numberOfOperationsAndSequence[0]).to.equal(3)
-    expect(numberOfOperationsAndSequence[1]).to.deep.equal([1, 3, 4, 5])
+    expect(numberOfOperationsAndSequence[1]).to.deep.equal([1, 2, 4, 5])
+  })
+  it('should properly calculate when x is 10', () => {
+    const x = 10
+
+    const numberOfOperationsAndSequence = dynamicPrimitiveCalculator(x)
+    expect(numberOfOperationsAndSequence[0]).to.equal(3)
+    expect(numberOfOperationsAndSequence[1]).to.deep.equal([1, 3, 9, 10])
   })
   it('should properly calculate when x is 96234', () => {
     const x = 96234
